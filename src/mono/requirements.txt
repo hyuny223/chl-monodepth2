@@ -1,0 +1,14 @@
+opencv-python
+numpy
+torch
+torchvision
+tensorboard
+tensorboardX
+torchsummary
+pynvml
+onnx
+onnxruntime
+terminaltables
+tqdm
+pycuda
+open3d

@@ -1,0 +1,15 @@
+.catkin_workspace
+.vscode
+
+tmp
+src/mono/ws.code-workspace
+src/mono/info/extrinsic
+src/mono/info/intrinsic
+src/mono/info/metadata.yaml
+src/mono/resources/*
+src/mono/rviz
+src/mono/Thirdparty
+src/mono/src/main.cpp
+src/mono/utils/ws.code-workspace
+src/mono/build.sh
+src/mono/CMakeLists.txt
