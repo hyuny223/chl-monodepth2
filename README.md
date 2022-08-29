@@ -42,9 +42,8 @@ You should modify arguments in "mono2.launch" such as model_path etc.
 source devel/setup.bash
 roslaunch mono mono2.py
 ```
-<br>
 
-# 3. Limits
+# 3. Limitations
 ## 1. Real Time  
 This is not suitable for using in real time because it takes about 0.2 sec(5FPS) to process from subscribing image topic to publishing estimated depth image.
 

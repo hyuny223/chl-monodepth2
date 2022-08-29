@@ -3,6 +3,7 @@
 import argparse
 import numpy as np
 import yaml
+import time
 
 import warnings
 
@@ -31,25 +32,25 @@ def parse():
 if __name__ == "__main__":
 
     model_path = parse()
-    K_, int_param, distortion, int_param_scaling, original_height, original_width = load_yaml.loadYaml()
+    K_, int_param, distortion, int_param_scaling, original_height, original_width, Tcw, Twl = load_yaml.loadYaml()
     encoder, depth_decoder, feed_height, feed_width, device = load_model.loadModel(model_path)
 
     rospy.init_node("my_node", anonymous=True)
     # Just do it
-    ROS = subpub.SubPub_v2(int_param, distortion, int_param_scaling,
-                            original_height, original_width,
-                            feed_height, feed_width,
-                            device, encoder, depth_decoder,
-                            K_)
-    rospy.spin()
+    # ROS = subpub.SubPub_v2(int_param, distortion, int_param_scaling,
+    #                         original_height, original_width,
+    #                         feed_height, feed_width,
+    #                         device, encoder, depth_decoder,
+    #                         K_)
+    # rospy.spin()
 
 
 
-    """
     # For syncronization. But incompleted
     ROS = subpub.SubPub_v1(int_param, distortion, int_param_scaling,
                             original_height, original_width,
                             feed_height, feed_width,
                             device, encoder, depth_decoder,
-                            K_)
-    """
+                            K_, Tcw, Twl)
+    rospy.spin()
+    

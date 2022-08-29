@@ -7,7 +7,7 @@
     <arg name="file_name" default="gangnam_1-002" />
     <node pkg="rosbag" type="play" name="player" output="screen" args="$(arg path)$(arg file_name).bag --quiet --clock -l"/>
 
-    <node pkg="tf_publisher_gui" type="run.py" name="tf_publisher_gui"/>
+    <!-- <node pkg="tf_publisher_gui" type="run.py" name="tf_publisher_gui"/> -->
 
     <!-- best value : x = 0, y = 0, z = -2.79, roll = -120, pitch = -180, yaw = -62 -->
     <!-- <node pkg="tf" type="static_transform_publisher" name="num1" args="0 0 0 0 0 0 base_link rslidar 100" /> -->
@@ -17,3 +17,4 @@
 
     <node pkg="mono" type="mono2.py" name="my_node" output="screen" args="--model_path $(arg model_path)"/>
 </launch>
+

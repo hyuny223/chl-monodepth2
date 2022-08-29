@@ -13,3 +13,6 @@ src/mono/src/main.cpp
 src/mono/utils/ws.code-workspace
 src/mono/build.sh
 src/mono/CMakeLists.txt
+
+src/mono/files/weights/models/weights_0/adam.pth
+src/mono/files/weights/models/weights_1/adam.pth

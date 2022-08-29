@@ -18,7 +18,7 @@ class Open3D:
     '''
     uncompleted
     '''
-    def drawLidar(self, ros_cloud):
+    def drawLiDAR(self, ros_cloud):
 
         c = process_open3d.convertCloudFromRosToOpen3d(ros_cloud)
         open3d.visualization.draw_geometries([c],
